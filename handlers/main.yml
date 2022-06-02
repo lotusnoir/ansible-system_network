@@ -1,6 +1,6 @@
 ---
 - name: "Restart addtional interfaces"
-  shell: "ifdown {{ item.interface | default(ansible_default_ipv4.interface) }}:{{ ansible_loop.index }}; sleep 1; ifup {{ item.interface | default(ansible_default_ipv4.interface) }}:{{ ansible_loop.index }}"
+  ansible.builtin.shell: "ifdown {{ item.interface | default(ansible_default_ipv4.interface) }}:{{ ansible_loop.index }}; sleep 1; ifup {{ item.interface | default(ansible_default_ipv4.interface) }}:{{ ansible_loop.index }}"
   loop: "{{ network_addtionnal_ips }}"
   loop_control:
     extended: 'yes'
