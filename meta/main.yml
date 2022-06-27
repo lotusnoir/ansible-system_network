@@ -19,6 +19,9 @@ galaxy_info:
     - name: "RedHat"
       versions:
         - "Maipo"
+    - name: "OracleLinux"
+      versions:
+        - "8"
 
   galaxy_tags:
     - network
