@@ -15,7 +15,7 @@
     dest: /etc/network/interfaces
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
   when:
     - network_static_primary is defined
     - network_static_primary|length > 0
@@ -26,7 +26,7 @@
     dest: /etc/network/interfaces.d/other_interfaces
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
   notify: "Restart addtional interfaces"
   when:
     - network_addtionnal_ips is defined
